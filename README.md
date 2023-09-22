@@ -136,3 +136,63 @@ Setelah file `zippppfileee.zip` di-unzip menggunakan password yang didapat, akan
 
 ![5-c](images/5-c.jpg)
 
+## Soal 6
+
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan <b>"server SOURCE ADDRESS 7812 is invalid".</b> ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+> JDRNJA
+
+<hr style="width:60%;text-align:center">
+
+Informasi yang didapat dari soal:
+
+1. Jika kita mengumpulkan semua Huruf kapital (kecuali "SOURCE ADDRESS") yang ada pada soal, akan terbentuk kata `SUBTITUSI`.
+2. Kata `SOURCE ADDRESS` menggunakan kapital semua.
+3. Pada soal terpadat angka `7812`.
+4. terdapat informasi a1, e5, u21
+
+Dari informasi ke-3, mencoba untuk menuju packet no `7812`, akan didapatkan source adress packet tersebut. Dengan informasi ke-1, kita dapat mencoba untuk subtitusi ip tersebut dengan sebuah huruf. Sesuai dengan informasi ke-4, key dari cipher adalah 0. sehingga didapatkan sebagai berikut:
+
+```txt
+104.18.14.101
+↓  ↓  ↓  ↓  ↓  ↓    dipisah
+10 4  18 14 10 1
+↓  ↓  ↓  ↓  ↓  ↓    disubtitusi
+J  D  R  N  J  A
+```
+![6-a](images/6-jarkom.jpg)
+
+## Soal 7
+
+Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+> 6
+
+<hr style="width:60%;text-align:center">
+
+> Filter packet dengan menggunakan query:<br>`ip.dst == 184.87.193.88`
+
+![7-a](images/7-jarkom.jpg)
+
+## Soal 8
+
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+> `tcp.dstport == 80 Il udp.dstport == 80`
+
+## Soal 9
+
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+
+> `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34`
+
+## Soal 10
+
+Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+> `dhafin:kesayangannyak0k0`
+
+<hr style="width:60%;text-align:center">
+
+> Filter packet dengan menggunakan query:<br>`telnet contains ":"`
+
+![10-jarkom](images/10-jarkom.jpg)
