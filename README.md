@@ -159,7 +159,7 @@ Dari informasi ke-3, mencoba untuk menuju packet no `7812`, akan didapatkan sour
 ↓  ↓  ↓  ↓  ↓  ↓    disubtitusi
 J  D  R  N  J  A
 ```
-![6-a](images/6-jarkom.jpg)
+![6-a](images/6-jarkom.png)
 
 ## Soal 7
 
@@ -171,7 +171,7 @@ Berapa jumlah packet yang menuju IP 184.87.193.88?
 
 > Filter packet dengan menggunakan query:<br>`ip.dst == 184.87.193.88`
 
-![7-a](images/7-jarkom.jpg)
+![7-a](images/7-jarkom.png)
 
 ## Soal 8
 
@@ -195,4 +195,4 @@ Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
 
 > Filter packet dengan menggunakan query:<br>`telnet contains ":"`
 
-![10-jarkom](images/10-jarkom.jpg)
+![10-jarkom](images/10-jarkom.png)
